@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%- todos.title %></title>
+    <style>
+      body { padding-top: 70px; }
+    </style>
+    <!-- Bootstrap -->
+    <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+   
+      <a class="navbar-brand" href="/">GQ Todo List</a>
+
+    </div>
+    <p class="navbar-text navbar-right"><a id="nowTime"></a>  | <a href="#">JOB List <span class="badge"><%- todos.length %></span></a></p>
+
+</nav>
+
+<div class= "container theme-showcase" role="main">
+<div class="page-header">
+  <h1>Unfinished work list <small>We're here to put a dent in the universe </small></h1>
+</div>
+
+      <%- body %> 
+
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+ function current(){
+     var d=new Date(),str='';
+     str +=d.getFullYear()+'年';   //获取当前年份
+     str +=d.getMonth()+1+'月';   //获取当前月份（0——11）
+
+     str +=d.getDate()+'日';    
+     str +=d.getHours()+'时';
+     str +=d.getMinutes()+'分';
+     str +=d.getSeconds()+'秒';
+     return str; }
+     setInterval(function(){$("#nowTime").html(current)},1000);
+</script>
+  </body>
+</html>
