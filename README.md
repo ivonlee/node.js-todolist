@@ -25,7 +25,7 @@ node.js+mongodb+bootstrap
     
 #安装
 
-    git clone 
-    cd todo-list
+    git clone https://github.com/ivonlee/node.js-todolist.git
+    cd node.js-todolist
     npm install
     node app.js
