@@ -1,8 +1,8 @@
-node.js+mongodb+bootstrap
+node.js+mongodb+ejs+bootstrap
 ================
 #软件架构
 
-本程序采用node.js+mongodb+bootstrap 
+本程序采用node.js+mongodb+ejs+bootstrap 
 
 
 #node.js模块
@@ -29,3 +29,6 @@ node.js+mongodb+bootstrap
     cd node.js-todolist
     npm install
     node app.js
+
+#预览
+![image](tododemo.png)
